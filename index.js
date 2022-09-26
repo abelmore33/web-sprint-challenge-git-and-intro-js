@@ -255,7 +255,7 @@ function listOfNames(array) {
   }
   return newArray
 }
-console.log(listOfNames(artists))
+console.log('task 4', listOfNames(artists));
 
 
 
