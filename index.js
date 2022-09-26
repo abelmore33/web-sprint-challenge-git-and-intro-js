@@ -209,10 +209,11 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
+console.log('task 1', artists[0].name);
 
 
 //(2) Bio of the third artist (2nd index) in the array 
-
+console.log('task 1',artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -230,10 +231,12 @@ Use getArtistByIndex to do the following:
 
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+function getArtistByIndex(array,index) {
 
+  let string = "the artist at index" + " " + index + " " + "is" + " " + array[index].name;
+  return string;
+}
+console.log('task 3', getArtistByIndex(artists,1));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -244,9 +247,15 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(array) {
+  let newArray = array;
+  for( var i = 0;i < array.length;i++){
+    newArray[i] = array[i].name;
+    
+  }
+  return newArray
 }
+console.log(listOfNames(artists))
 
 
 
